@@ -39,3 +39,16 @@ class ByteArray:
             ret += hex(bytarray[c]).lower().replace('0x', '')
 
         return ret
+
+
+    # TODO(srmorin): does Python support operator overrides
+    @staticmethod
+    def xor(bytarray1, bytarray2):
+
+        #TODO(srmorin): align the byte arrays if one is shorter than the other
+        result = bytearray()
+        for c in range(len(bytarray1)):
+            result.append(bytarray1[c] ^ bytarray2[c])
+
+        return result
+

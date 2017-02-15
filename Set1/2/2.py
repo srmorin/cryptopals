@@ -10,11 +10,9 @@ def main():
     b1 = HexString.convertToBinaryArray(exercise_string_1)
     b2 = HexString.convertToBinaryArray(exercise_string_2)
 
-    result = bytearray()
-    for c in range(len(b1)):
-        result.append(b1[c] ^ b2[c])
+    b3 = ByteArray.xor(b1, b2)
 
-    result = ByteArray.convertToHexString(result)
+    result = ByteArray.convertToHexString(b3)
     print result
     print result == expected_string
 
