@@ -24,3 +24,18 @@ class HexString:
             hexstr = hexstr[2:]
 
         return b
+
+class ByteArray:
+
+    @staticmethod
+    def convertToHexString(bytarray):
+        """
+        :param bytarray: binaryarray
+        :return: a string containing a hexadecimal representation
+        """
+
+        ret = ''
+        for c in range(0, len(bytarray)):
+            ret += hex(bytarray[c]).lower().replace('0x', '')
+
+        return ret
