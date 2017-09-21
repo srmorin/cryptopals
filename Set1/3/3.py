@@ -10,7 +10,7 @@ def analyze_text(decoded_string):
     Very basic function that scores phrases based on the number of characters are valid.
     Not a great approach, but it found the one I was looking for on the first shot.
     :param decoded_string: byte array
-    :return: dictionary or score
+    :returns: dictionary or score
     """
     #TODO(srmorin): create a better analyzer that does more than count decoded characters
 
